@@ -8,15 +8,15 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        // 1. Opening the image
+        // Opening the image
         File imageFile = new File("images/lebron-james.jpg");
         BufferedImage image = ImageIO.read(imageFile);
 
-        // 2. Transform the image to pixel art
+        // Transform the image to pixel art
         int blockSize = 20; // Adjusting the pixel size is going to make it more blurry
         BufferedImage pixelatedImage = pixelateUsingScaling(image, blockSize);
 
-        // 3. Store he output to a separate directory
+        // Store he output to a separate directory
         File outputFileScaling = new File("output/pixel/image-output.jpg");
         ImageIO.write(pixelatedImage, "jpg", outputFileScaling);
 
