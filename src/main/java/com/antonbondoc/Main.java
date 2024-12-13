@@ -17,9 +17,10 @@ public class Main {
         BufferedImage pixelatedImage = pixelateUsingScaling(image, blockSize);
 
         // 3. Store he output to a separate directory
-
-        File outputFileScaling = new File("output/image-output-scaling.jpg");
+        File outputFileScaling = new File("output/pixel/image-output.jpg");
         ImageIO.write(pixelatedImage, "jpg", outputFileScaling);
+
+        // TODO: From the pixelated image generate the Excel file. How do we format it?
     }
 
     public static BufferedImage pixelateUsingScaling(BufferedImage inputImage, int blockSize) {
